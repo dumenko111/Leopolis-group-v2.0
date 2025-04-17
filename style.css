@@ -49,6 +49,7 @@ img {
   box-shadow: var(--shadow);
   z-index: 100;
   padding: 1rem 0;
+  border-radius: 10px;
 }
 
 .buttons-container {
@@ -249,4 +250,34 @@ body.dark-theme .back-btn:hover {
 /* Анімація перемикання теми */
 body.theme-transition * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url('./img/logo/Logo_white-theme.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Для темної теми - затемнення фону */
+body.dark-theme {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url('./img/logo/Logo_dark-theme.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
