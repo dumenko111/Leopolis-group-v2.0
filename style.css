@@ -25,6 +25,8 @@ body {
 
 h5 {
   font-size: 2.0em;
+  line-height: 1em;
+  margin-bottom: 0.4em;
 }
 
 ul {
@@ -254,17 +256,6 @@ body.theme-transition * {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url('./img/logo/Logo_white-theme.jpg') no-repeat center center fixed;
@@ -280,4 +271,20 @@ body.dark-theme {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url('./img/logo/Logo_dark-theme.jpg') no-repeat center center fixed;
   background-size: cover;
+}
+
+
+
+
+.text-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.text-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain; 
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
 }
