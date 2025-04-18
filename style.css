@@ -39,6 +39,11 @@ img {
 }
 
 .app-container {
+
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -257,6 +262,11 @@ body.theme-transition * {
 
 
 body {
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url('./img/logo/Logo_white-theme.jpg') no-repeat center center fixed;
   background-size: cover;
