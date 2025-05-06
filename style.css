@@ -129,7 +129,7 @@ img {
 .info-card {
   background-color: white;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: var(--shadow);
   margin-top: 1.5rem;
   opacity: 0;
@@ -196,7 +196,7 @@ img {
   }
 
   .info-card {
-    padding: 1.2rem;
+    padding: 1rem;
     margin-top: 1rem;
   }
 }
@@ -439,7 +439,7 @@ body.dark-theme {
   padding: 0 15px;
   transition: max-height 0.3s ease, padding 0.3s ease;
   font-size: 14px;
-  color: #555;
+  color: #1f0b0a;
   /* Колір тексту для світлої теми */
   line-height: 1.5;
 }
@@ -456,10 +456,9 @@ body.dark-theme {
 /* Стилі для темної теми */
 @media (prefers-color-scheme: dark) {
   .custom-accordion-header {
-    background-color: #2d2d2d;
+    background-color: #63B3ED;
     color: #ffffff;
-    /* Білий текст у темній темі */
-    border-bottom-color: #444;
+    border-bottom-color: black;
   }
 
   .custom-accordion-header:hover {
@@ -475,4 +474,16 @@ body.dark-theme {
     color: #4a9cff;
     /* Блакитний для кращого контрасту */
   }
+}
+
+.custom-accordion-header,
+.custom-accordion-content {
+  color: #000000 !important;
+  /* Чорний колір */
+}
+
+.dark-theme .custom-accordion-header,
+.dark-theme .custom-accordion-content {
+  color: #ffffff !important;
+  /* Білий колір */
 }
