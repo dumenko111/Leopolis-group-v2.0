@@ -135,3 +135,51 @@ themeToggle.addEventListener('click', () => {
     body.classList.remove('theme-transition');
   }, 300);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const items = document.querySelectorAll('.custom-accordion-item');
+
+  items.forEach(item => {
+    const header = item.querySelector('.custom-accordion-header');
+    const content = item.querySelector('.custom-accordion-content');
+    const closeBtn = item.querySelector('.custom-accordion-close');
+
+    header.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        item.classList.remove('active');
+      });
+    }
+  });
+});

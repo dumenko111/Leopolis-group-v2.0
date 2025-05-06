@@ -298,3 +298,181 @@ body.dark-theme {
   object-fit: contain; 
   filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custom-accordion {
+  margin: 20px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.custom-accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 8px;
+}
+
+.custom-accordion-header {
+  padding: 12px 15px;
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-accordion-header:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-accordion-header::after {
+  content: '+';
+  font-size: 20px;
+  transition: transform 0.9s ease;
+}
+
+.custom-accordion-item.active .custom-accordion-header::after {
+  transform: rotate(45deg);
+}
+
+.custom-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.custom-accordion-item.active .custom-accordion-content {
+  max-height: 100px;
+  padding: 10px 15px;
+}
+
+.custom-accordion-close {
+  color: #0066cc;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+
+
+.custom-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.custom-accordion-item.active .custom-accordion-content {
+  max-height: none;
+  padding: 10px 15px;
+  overflow-y: auto;
+}
+
+
+/* Стилі для світлої теми (за замовчуванням) */
+.custom-accordion {
+  margin: 20px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.custom-accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 8px;
+}
+
+.custom-accordion-header {
+  padding: 12px 15px;
+  background-color: #f8f8f8;
+  color: #333;
+  /* Колір тексту для світлої теми */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-accordion-header:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-accordion-header::after {
+  content: '+';
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.custom-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  font-size: 14px;
+  color: #555;
+  /* Колір тексту для світлої теми */
+  line-height: 1.5;
+}
+
+.custom-accordion-close {
+  color: #0066cc;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+/* Стилі для темної теми */
+@media (prefers-color-scheme: dark) {
+  .custom-accordion-header {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    /* Білий текст у темній темі */
+    border-bottom-color: #444;
+  }
+
+  .custom-accordion-header:hover {
+    background-color: #3a3a3a;
+  }
+
+  .custom-accordion-content {
+    color: #e0e0e0;
+    /* Світло-сірий текст для кращої читабельності */
+  }
+
+  .custom-accordion-close {
+    color: #4a9cff;
+    /* Блакитний для кращого контрасту */
+  }
+}
