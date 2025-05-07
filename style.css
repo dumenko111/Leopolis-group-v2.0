@@ -1,3 +1,4 @@
+
 :root {
   --primary: #4361ee;
   --secondary: #3f37c9;
@@ -8,6 +9,11 @@
   --text: #2b2d42;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --accordion-bg: #f8f8f8;
+  --accordion-text: #3e326a;
+  --accordion-hover: #f0f0f0;
+  --accordion-content-text: #3e3c75;
+  --border-color: #e0e0e0;
 }
 
 * {
@@ -262,7 +268,6 @@ body.theme-transition * {
 
 
 body {
-
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -282,8 +287,6 @@ body.dark-theme {
     url('./img/logo/Logo_dark-theme.jpg') no-repeat center center fixed;
   background-size: cover;
 }
-
-
 
 
 .text-with-icon {
@@ -306,18 +309,7 @@ body.dark-theme {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*
 .custom-accordion {
   margin: 20px 0;
   font-family: 'Roboto', sans-serif;
@@ -398,7 +390,7 @@ body.dark-theme {
 }
 
 
-/* Стилі для світлої теми (за замовчуванням) */
+
 .custom-accordion {
   margin: 20px 0;
   font-family: 'Roboto', sans-serif;
@@ -413,7 +405,7 @@ body.dark-theme {
   padding: 12px 15px;
   background-color: #f8f8f8;
   color: #333;
-  /* Колір тексту для світлої теми */
+
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -440,7 +432,7 @@ body.dark-theme {
   transition: max-height 0.3s ease, padding 0.3s ease;
   font-size: 14px;
   color: #1f0b0a;
-  /* Колір тексту для світлої теми */
+
   line-height: 1.5;
 }
 
@@ -453,7 +445,7 @@ body.dark-theme {
   display: inline-block;
 }
 
-/* Стилі для темної теми */
+
 @media (prefers-color-scheme: dark) {
   .custom-accordion-header {
     background-color: #63B3ED;
@@ -462,28 +454,102 @@ body.dark-theme {
   }
 
   .custom-accordion-header:hover {
-    background-color: #3a3a3a;
+    background-color: #087a9d;
   }
 
   .custom-accordion-content {
     color: #e0e0e0;
-    /* Світло-сірий текст для кращої читабельності */
+
   }
 
   .custom-accordion-close {
     color: #4a9cff;
-    /* Блакитний для кращого контрасту */
+
   }
 }
 
 .custom-accordion-header,
 .custom-accordion-content {
   color: #000000 !important;
-  /* Чорний колір */
+
 }
 
 .dark-theme .custom-accordion-header,
 .dark-theme .custom-accordion-content {
   color: #ffffff !important;
-  /* Білий колір */
+
+}
+*/
+/* Основні стилі акордеону */
+
+
+.custom-accordion {
+  margin: 20px 0;
+  font-family: inherit;
+  /* Успадковуємо шрифт з батьківського елемента */
+}
+
+.custom-accordion-item {
+  border-bottom: 1px solid var(--border-color, #e0e0e0);
+  margin-bottom: 8px;
+}
+
+.custom-accordion-header {
+  padding: 12px 15px;
+  background-color: var(--accordion-bg, #f8f8f8);
+  color: var(--accordion-text, #333);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition, all 0.3s ease);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-accordion-header:hover {
+  background-color: var(--accordion-hover, #f0f0f0);
+}
+
+.custom-accordion-header::after {
+  content: '+';
+  font-size: 20px;
+  transition: var(--transition, all 0.3s ease);
+}
+
+.custom-accordion-item.active .custom-accordion-header::after {
+  transform: rotate(45deg);
+}
+
+.custom-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: var(--transition, all 0.3s ease);
+  font-size: 14px;
+  color: var(--accordion-content-text, #555);
+  line-height: 1.5;
+}
+
+.custom-accordion-item.active .custom-accordion-content {
+  max-height: none;
+  padding: 10px 15px;
+}
+
+.custom-accordion-close {
+  color: var(--link-color, #0066cc);
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+/* Темна тема */
+.dark-theme {
+  --accordion-bg: #2d3748;
+  --accordion-text: #ffffff;
+  --accordion-hover: #3b5684;
+  --accordion-content-text: #e2e8f0;
+  --border-color: #374e75;
 }
